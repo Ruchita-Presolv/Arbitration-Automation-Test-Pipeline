@@ -22,7 +22,7 @@ public class AppHooks {
 		ConfigReader cr = new ConfigReader();
 		prop =cr.init_Prop();
 		DriverFactory df = new DriverFactory();
-		driver = df.initdriver(prop.getProperty("browser"));  //change 
+		driver = df.initdriver(prop.getProperty("Browser"));  //change 
 		//System.out.println("driver"+driver);
 		//System.out.println("bro "+prop.getProperty(browser));
 	}
