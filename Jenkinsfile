@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     tools {
-        maven 'Maven 3.8.6'     // Make sure this name matches exactly what you added under "Global Tool Configuration"
-        jdk 'Java 17'           // Set to 'Java 17' if that's what you named it (or keep as 'Java 11' if you didn't rename)
+        maven 'Maven 3.8.6'     // Ensure exact match in Global Tool Configuration
+        jdk 'Java 17'           // Matches configured JDK (can be Java 11 if that's what you set)
     }
 
     environment {
@@ -13,7 +13,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/Ruchita-Presolv/Arbitration-Automation-Test-Pipeline.git'
+                git branch: 'main', url: 'https://github.com/Ruchita-Presolv/Arbitration-Automation-Test-Pipeline.git'
             }
         }
 
@@ -47,3 +47,4 @@ pipeline {
         }
     }
 }
+
