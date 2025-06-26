@@ -3,7 +3,7 @@ pipeline {
 
     tools {
         maven 'Maven 3.8.6'     // Ensure exact match in Global Tool Configuration
-        jdk 'Java 17'           // Matches configured JDK (can be Java 11 if that's what you set)
+        jdk 'Java 11'           // Matches configured JDK (can be Java 11 if that's what you set)
     }
 
     environment {
