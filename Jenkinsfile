@@ -2,7 +2,7 @@ pipeline {
     agent any
 
     tools {
-        jdk 'jdk17'                 // ✅ Already configured
+        jdk 'jdk11'                 // ✅ Already configured
         maven 'Maven 3.8.6'         // ✅ Use the exact name shown in the error
     }
 
