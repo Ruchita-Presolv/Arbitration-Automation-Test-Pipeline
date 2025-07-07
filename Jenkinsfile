@@ -2,8 +2,8 @@ pipeline {
     agent any
 
     tools {
-        jdk 'jdk11'           // ✅ Name must match exactly what is configured
-        maven 'maven-3.8.8'   // ✅ Replace with actual Maven tool name (configure if missing)
+        jdk 'jdk11'                 // ✅ Already configured
+        maven 'Maven 3.8.6'         // ✅ Use the exact name shown in the error
     }
 
     environment {
@@ -47,4 +47,3 @@ pipeline {
         }
     }
 }
-
