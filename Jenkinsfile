@@ -1,6 +1,10 @@
 pipeline {
     agent any
 
+     tools {
+        jdk 'jdk11' // 🔧 Match the name you configured in Jenkins
+    }
+
     environment {
         JAVA_TOOL_OPTIONS = '--add-exports jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED --add-opens jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED --add-opens jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED'
     }
