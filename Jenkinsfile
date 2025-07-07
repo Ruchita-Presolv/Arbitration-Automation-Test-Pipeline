@@ -1,11 +1,14 @@
 pipeline {
     agent any
 
-     tools {
-        jdk 'jdk11' // 🔧 Match the name you configured in Jenkins
+    tools {
+        jdk 'jdk11'           // ✅ Name must match exactly what is configured
+        maven 'maven-3.8.8'   // ✅ Replace with actual Maven tool name (configure if missing)
     }
 
     environment {
+        JAVA_HOME = tool(name: 'jdk11', type: 'jdk')
+        PATH = "${JAVA_HOME}/bin:${env.PATH}"
         JAVA_TOOL_OPTIONS = '--add-exports jdk.compiler/com.sun.tools.javac.processing=ALL-UNNAMED --add-opens jdk.compiler/com.sun.tools.javac.util=ALL-UNNAMED --add-opens jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED'
     }
 
@@ -44,3 +47,4 @@ pipeline {
         }
     }
 }
+
