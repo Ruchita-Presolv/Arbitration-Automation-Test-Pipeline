@@ -12,11 +12,11 @@ import io.cucumber.junit.CucumberOptions;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 
-		features ="src/test/resources/org.features/AdminUsability.feature",
+		features ="src/test/resources/org.features/DashBoardPage.feature",
 		glue = {"org.stepdefinitions","org.applicationhooks"},
 		monochrome = true, 
 		dryRun = false ,
-       tags= "@ArbitrationNotificationsStatus",  // to run specific tc 
+       tags= "@Admin",  // to run specific tc 
 		plugin = {"pretty",
 				"html:target/html_report/cucumber_report.html",
 				"json:target/json_report/json_report.json",
