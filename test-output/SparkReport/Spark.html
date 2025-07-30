@@ -1,115 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy"
+        content="sandbox; default-src 'none'; style-src 'self' data:; img-src 'self';">
+  <title>Jenkins CSP Safe Page</title>
+  <!-- Embedded CSS using data URI (acts as external but is inline) -->
+  <link rel="stylesheet" href="data:text/css;charset=utf-8,
+    body%20%7B%20font-family%3A%20Arial%2C%20sans-serif%3B%20background%3A%20%23f9f9f9%3B%20margin%3A%202em%3B%20%7D
+    .container%20%7B%20background%3A%20%23fff%3B%20border%3A%201px%20solid%20%23ccc%3B%20padding%3A%202em%3B%20border-radius%3A%208px%3B%20box-shadow%3A%200%200%205px%20rgba(0%2C0%2C0%2C0.1)%3B%20%7D
+    h1%20%7B%20color%3A%20%23222%3B%20%7D
+    p%20%7B%20color%3A%20%23666%3B%20%7D
+    img%20%7B%20max-width%3A%20100px%3B%20margin-top%3A%201em%3B%20%7D">
+</head>
 <body>
-
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 30px;
-            background-color: #f4f4f4;
-        }
-
-        h1 {
-            color: #2c3e50;
-            text-align: center;
-        }
-
-        .summary {
-            margin-top: 30px;
-        }
-
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-bottom: 40px;
-        }
-
-        th, td {
-            padding: 12px;
-            border: 1px solid #ddd;
-            text-align: center;
-        }
-
-        th {
-            background-color: #2c3e50;
-            color: white;
-        }
-
-        .pass {
-            color: green;
-            font-weight: bold;
-        }
-
-        .fail {
-            color: red;
-            font-weight: bold;
-        }
-
-        .test-case {
-            background: white;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-left: 6px solid #3498db;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        .status-pass {
-            color: green;
-            font-weight: bold;
-        }
-
-        .status-fail {
-            color: red;
-            font-weight: bold;
-        }
-    </style>
-
-    <h1>Automation Test Report</h1>
-
-    <div class="summary">
-        <h2>Test Summary</h2>
-        <table>
-            <tr>
-                <th>Total</th>
-                <th>Passed</th>
-                <th>Failed</th>
-                <th>Execution Time</th>
-            </tr>
-            <tr>
-                <td>5</td>
-                <td class="pass">4</td>
-                <td class="fail">1</td>
-                <td>12 seconds</td>
-            </tr>
-        </table>
-    </div>
-
-    <div class="test-case">
-        <h3>Test: Login Functionality</h3>
-        <p>Status: <span class="status-pass">PASSED</span></p>
-        <p>Duration: 2s</p>
-    </div>
-
-    <div class="test-case">
-        <h3>Test: Create New Case</h3>
-        <p>Status: <span class="status-pass">PASSED</span></p>
-        <p>Duration: 3s</p>
-    </div>
-
-    <div class="test-case">
-        <h3>Test: File Upload</h3>
-        <p>Status: <span class="status-fail">FAILED</span></p>
-        <p>Duration: 2s</p>
-    </div>
-
-    <div class="test-case">
-        <h3>Test: Case Resolution</h3>
-        <p>Status: <span class="status-pass">PASSED</span></p>
-        <p>Duration: 2.5s</p>
-    </div>
-
-    <div class="test-case">
-        <h3>Test: Logout</h3>
-        <p>Status: <span class="status-pass">PASSED</span></p>
-        <p>Duration: 2.5s</p>
-    </div>
-
+  <div class="container">
+    <h1>Hello, Jenkins!</h1>
+    <p>This HTML is safe under Jenkins default CSP settings.</p>
+    <img src="logo.png" alt="Jenkins Logo">
+  </div>
 </body>
+</html>
