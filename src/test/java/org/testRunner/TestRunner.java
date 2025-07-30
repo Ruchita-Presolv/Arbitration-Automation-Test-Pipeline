@@ -1,38 +1,32 @@
 package org.testRunner;
 
-/* RunastestNg
-import io.cucumber.testng.AbstractTestNGCucumberTests;
-import io.cucumber.testng.CucumberOptions;
- */
 import org.junit.runner.RunWith;
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-
-		features ="src/test/resources/org.features/DashBoardPage.feature",
-		glue = {"org.stepdefinitions","org.applicationhooks"},
-		monochrome = true, 
-		dryRun = false ,
-       tags= "@Admin",  // to run specific tc 
-		plugin = {"pretty",
-				"html:target/html_report/cucumber_report.html",
-				"json:target/json_report/json_report.json",
-				"junit:target/junit_report/junit_report.xml",
-				"com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-				 "rerun:target/rerun.txt" // Generate a file containing failed scenarios information
-		
-		}
-
-		)
-
-
-
-public class TestRunner  {   //extends AbstractTestNGCucumberTests run as testNg
-
+    features = "src/test/resources/org.features/DashBoardPage.feature",
+    glue = {
+        "org.stepdefinitions",
+        "org.applicationhooks"
+    },
+    monochrome = true,
+    dryRun = false,
+    tags = "@Admin", // Run scenarios tagged with @Admin
+    plugin = {
+        "pretty",
+        "html:target/html_report/cucumber_report.html",
+        "json:target/json_report/json_report.json",
+        "junit:target/junit_report/junit_report.xml",
+        "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
+        "rerun:target/failed_scenarios.txt" // Stores failed scenarios for re-run
+    }
+)
+public class TestRunner {
+    // Run this as a JUnit test. For TestNG, extend AbstractTestNGCucumberTests
 }
+
 //src/test/resources/org.features/UserUsability.feature
 //"@filterConfirm or @filterApprove"
 //"@Smoke or @ArbNameFil"
