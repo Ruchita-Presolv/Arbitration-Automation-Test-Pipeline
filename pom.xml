@@ -78,6 +78,20 @@
       <version>7.7.0</version>
       <scope>test</scope>
     </dependency>
+
+    <!-- ExtentReports Adapter for Cucumber 7 -->
+    <dependency>
+      <groupId>tech.grasshopper</groupId>
+      <artifactId>extentreports-cucumber7-adapter</artifactId>
+      <version>1.10.0</version>
+    </dependency>
+
+    <!-- ExtentReports Core -->
+    <dependency>
+      <groupId>com.aventstack</groupId>
+      <artifactId>extentreports</artifactId>
+      <version>5.0.9</version>
+    </dependency>
   </dependencies>
 
   <build>
@@ -92,7 +106,7 @@
         </configuration>
       </plugin>
 
-      <!-- Maven Surefire Plugin for running unit tests -->
+      <!-- Maven Surefire Plugin for unit tests -->
       <plugin>
         <artifactId>maven-surefire-plugin</artifactId>
         <version>3.2.5</version>
@@ -103,7 +117,7 @@
         </configuration>
       </plugin>
 
-      <!-- Maven Failsafe Plugin for integration or BDD tests -->
+      <!-- Maven Failsafe Plugin for integration/BDD tests -->
       <plugin>
         <artifactId>maven-failsafe-plugin</artifactId>
         <version>3.2.5</version>
@@ -118,5 +132,4 @@
       </plugin>
     </plugins>
   </build>
-
 </project>
