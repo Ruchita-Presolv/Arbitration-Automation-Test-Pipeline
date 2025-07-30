@@ -6,25 +6,25 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-    features = "src/test/resources/org.features/DashBoardPage.feature",
+    features = "src/test/resources/org.features",  // You can keep specific file or directory here
     glue = {
         "org.stepdefinitions",
         "org.applicationhooks"
     },
-    monochrome = true,
-    dryRun = false,
-    tags = "@Admin", // Run scenarios tagged with @Admin
+    tags = "@Admin",  // Update this based on what you want to run
     plugin = {
         "pretty",
         "html:target/html_report/cucumber_report.html",
         "json:target/json_report/json_report.json",
         "junit:target/junit_report/junit_report.xml",
         "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:",
-        "rerun:target/failed_scenarios.txt" // Stores failed scenarios for re-run
-    }
+        "rerun:target/rerun.txt" // For failed test re-run
+    },
+    monochrome = true,
+    dryRun = false
 )
 public class TestRunner {
-    // Run this as a JUnit test. For TestNG, extend AbstractTestNGCucumberTests
+    // To run with TestNG instead, extend AbstractTestNGCucumberTests and use TestNG runner
 }
 
 //src/test/resources/org.features/UserUsability.feature
