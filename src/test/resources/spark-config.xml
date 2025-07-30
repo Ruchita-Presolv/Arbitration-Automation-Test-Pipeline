@@ -1,0 +1,6 @@
+<configuration>
+  <theme>standard</theme>
+  <documentTitle>Arbitration Automation Report</documentTitle>
+  <reportName>Arb_Automation_Report</reportName>
+  <timelineEnabled>true</timelineEnabled>
+</configuration>
